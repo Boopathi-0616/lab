@@ -1,0 +1,205 @@
+🖥️ PART 1: Install VMware Workstation Player (Windows Host)
+🔹 Step 1: Download VMware
+
+Open browser
+
+Go to:
+👉 https://www.vmware.com/products/workstation-player.html
+
+Click Download Now
+
+Select Windows version
+
+Download the .exe file
+
+🔹 Step 2: Install VMware
+
+Double click downloaded file
+
+Click Next
+
+Accept License Agreement
+
+Click Next
+
+Keep default settings
+
+Click Install
+
+Click Finish
+
+✔ Restart system if asked
+
+🐧 PART 2: Download Ubuntu ISO
+🔹 Step 1: Download Ubuntu
+
+Go to:
+👉 https://ubuntu.com/download/desktop
+
+Download Ubuntu 22.04 LTS
+
+File name will be like:
+ubuntu-22.04-desktop-amd64.iso
+
+Keep this file safe.
+
+💻 PART 3: Create Ubuntu Virtual Machine in VMware
+🔹 Step 1: Create New Virtual Machine
+
+Open VMware Workstation Player
+
+Click Create a New Virtual Machine
+
+Select:
+👉 Installer disc image file (iso)
+
+Browse and select Ubuntu ISO file
+
+Click Next
+
+🔹 Step 2: Guest OS Selection
+
+OS Type: Linux
+
+Version: Ubuntu 64-bit
+
+Click Next
+
+🔹 Step 3: Name the VM
+
+Name: Ubuntu-Blockchain
+
+Location: Default
+
+Click Next
+
+🔹 Step 4: Set Disk Size
+
+Recommended: 50 GB
+
+Select: Store virtual disk as a single file
+
+Click Next
+
+🔹 Step 5: Customize Hardware (VERY IMPORTANT)
+
+Click Customize Hardware
+
+🔹 Memory (RAM)
+
+Minimum: 4 GB (4096 MB)
+
+Recommended: 8 GB (8192 MB)
+
+🔹 Processor
+
+Number of processors: 1
+
+Number of cores per processor: 2 or 4
+
+🔹 Network Adapter
+
+Select: NAT
+
+Click Close
+Click Finish
+
+🐧 PART 4: Install Ubuntu Inside VMware
+🔹 Step 1: Start VM
+
+Click Play Virtual Machine
+
+Ubuntu screen will appear.
+
+Click:
+👉 Install Ubuntu
+
+🔹 Step 2: Keyboard
+
+Select: English
+Click Continue
+
+🔹 Step 3: Installation Type
+
+Select:
+✔ Normal Installation
+✔ Download updates
+✔ Install third-party software
+
+Click Continue
+
+🔹 Step 4: Installation Option
+
+Select:
+👉 Erase disk and install Ubuntu
+
+⚠ Don't worry — it erases only virtual disk.
+
+Click Install
+
+🔹 Step 5: Set User Details
+
+Enter:
+
+Your Name
+
+Computer Name
+
+Username
+
+Password
+
+Click Continue
+
+Wait 10–15 minutes.
+
+🔹 Step 6: Restart
+
+After installation:
+Click Restart Now
+
+Ubuntu will boot.
+
+Login using password.
+
+✅ PART 5: After Ubuntu Login – Initial Setup
+
+Open Terminal (Ctrl + Alt + T)
+
+Run:
+
+sudo apt update
+sudo apt upgrade -y
+
+🔎 Final Verification Commands (For Class Demo)
+
+Show these:
+
+lsb_release -a
+free -h
+df -h
+
+
+Explain:
+
+lsb_release -a → Shows Ubuntu version
+
+free -h → Shows RAM
+
+df -h → Shows disk size
+
+🎯 Conclusion for Presentation
+
+You can conclude like this:
+
+"VMware Workstation Player was installed successfully. Ubuntu 22.04 LTS was configured with 8GB RAM, 50GB disk space, and 2 CPU cores. The system is now ready for Docker and Hyperledger Fabric installation."
+
+⚠ Important Note for Blockchain Lab
+
+Hyperledger Fabric + Docker requires:
+
+✔ Minimum 8GB RAM recommended
+✔ Virtualization enabled in BIOS
+
+If VMware shows error:
+👉 Enable Virtualization (VT-x) in BIOS
